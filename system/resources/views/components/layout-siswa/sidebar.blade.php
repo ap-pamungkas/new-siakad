@@ -8,7 +8,7 @@
 <!--- Sidemenu -->
 <div id="sidebar-menu">
 
-    <ul class="metismenu" id="side-menu">
+    <ul class="metismenu" id="side-menu" >
 
         <li class="menu-title">{{ auth('siswa')->user()->nama }}</li>
 
