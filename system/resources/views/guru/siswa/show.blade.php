@@ -1,4 +1,4 @@
-<x-app>
+<x-guru>
     <div class="container mt-5">
         <div class="card">
             <div class="card-header">
@@ -26,4 +26,4 @@
             </div>
         </div>
     </div>
-</x-app>
+</x-guru>

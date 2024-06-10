@@ -4,14 +4,14 @@
             <div class="card-header">
                 <div class="row">
 <div class="col-md-12">
-    <a href="{{ url('kepsek/kepsek') }}" class="float-right  btn btn-primary mt-3">Kembali</a>
+    <a href="{{ url('kepsek/guru') }}" class="float-right  btn btn-primary mt-3">Kembali</a>
                  <h1>  data {{ $guru->nama }} | Guru</h1>  
                
                 </div>
             </div>
                
             </div>
-            <div class="card-body">
+            <div class="card-body" >
 
                 <p class="card-text"><strong>Nama:</strong> {{ $guru->nama }}</p>
                 <p class="card-text"><strong>NIP:</strong> {{ $guru->nip }}</p>

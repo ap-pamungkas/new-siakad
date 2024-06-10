@@ -52,26 +52,26 @@
   <x-utils.notif />
 
   <x-modals.modal id="nilaiModal" action="#">
-      <div class="col-md-12">
-          <label for="kelas" class="form-label">Nama</label>
-          <select required class="form-control select2" style="width: 100%;" name="siswa_id" id="kelas">
-              <option hidden>--Pilih--</option>
-              @foreach ($list_siswa as $item)
-                  @foreach ($item->kelasSiswaDetail as $detail)
-                      <option value="{{$detail->siswa->siswa_id}}">{{$detail->siswa->nama}}</option>
-                  @endforeach
-              @endforeach
-          </select>
-      </div>
-      <div class="col-md-12">
-          <label for="wali_kelas" class="form-label">Mata Pelajaran</label>
-          <select required class="form-control select2" style="width: 100%;" name="mapel_id" id="wali_kelas">
-              <option hidden>--Pilih--</option>
-              @foreach ($list_siswa as $x)
-                  <option value="{{ $x->mapel->first()->mapel_id}}">{{ $x->mapel->first()->mapel_nama}}</option>
-              @endforeach
-          </select>
-      </div>
+    <div class="col-md-12">
+        <label for="kelas" class="form-label">Nama</label>
+        <select required class="form-control select2" style="width: 100%;" name="siswa_id" id="kelas">
+            <option hidden>--Pilih--</option>
+            @foreach ($list_siswa as $item)
+                <option value="{{$item['siswa_id']}}">{{$item['nama']}}</option>
+            @endforeach
+        </select>
+        
+    </div>
+    <div class="col-md-12">
+        <label for="wali_kelas" class="form-label">Mata Pelajaran</label>
+        <select required class="form-control select2" style="width: 100%;" name="mapel_id" id="wali_kelas">
+            <option hidden>--Pilih--</option>
+            @foreach ($list_mapel as $item)
+                <option value="{{$item['mapel_id']}}">{{$item['mapel_nama']}}</option>
+            @endforeach
+        </select>
+    </div>
+    
       <div class="col-md-12">
           <label for="wali_kelas" class="form-label">Semester</label>
           <select required class="form-control select2" style="width: 100%;" name="semester_id" id="wali_kelas">

@@ -65,7 +65,7 @@
             </button>
           </div>
           <div class="modal-body">
-            <form action="{{url('admin/master-data/siswa')}}/{{$detail->siswa->siswa_id}}" method="POST" enctype="multipart/form-data">
+            <form action="{{url('guru/siswa')}}/{{$detail->siswa->siswa_id}}" method="POST" enctype="multipart/form-data">
               @csrf
               @method('PUT')
               <div class="row">

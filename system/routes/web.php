@@ -27,13 +27,11 @@ Route::post('/login', [AuthController::class, 'loginProcess']);
 Route::post('/logout', [AuthController::class, 'logout'])->middleware('auth');
 
 
-   
-Route::get('/', function () {
-    return view('welcome')->with('auth.custom');
-});
 
 route::middleware('auth:admin')->group(function () {
-   
+        
+
+
        
         Route::prefix('admin')->group(function () {
             include __DIR__.'/admin/__.php';

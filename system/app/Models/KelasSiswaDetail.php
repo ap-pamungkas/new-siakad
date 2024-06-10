@@ -20,5 +20,8 @@ class KelasSiswaDetail extends Model
     function  siswa(){
         return $this->belongsTo(Siswa::class,'siswa_id');
     }
+    function  mapel(){
+        return $this->belongsToMany(Siswa::class,'mapel_id', 'mapel_id');
+    }
    
 }

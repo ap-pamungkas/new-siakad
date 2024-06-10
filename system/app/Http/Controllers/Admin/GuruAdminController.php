@@ -90,15 +90,15 @@ class GuruAdminController extends Controller
         
         $guru = Guru::findOrFail($guru);
 
-        $kelasSiswa = KelasSiswa::where('guru_id', $guru->guru_id)->get();
-        $kelasSiswaDetail = KelasSiswa::where('kode', $kelasSiswa->kode)->get();
+        $kelasSiswa = KelasSiswa::where('guru_id', $guru->guru_id)->delete();
+        // $kelasSiswaDetail = KelasSiswa::where('kode', $kelasSiswa->kode)->get();
         
         // return $kelasSiswa;
         if ($guru->foto && file_exists(public_path($guru->foto))) {
             unlink(public_path($guru->foto)); // Hapus file foto
         }
-        $kelasSiswaDetail->delete();
-        $kelasSiswa->delete();
+        // // $kelasSiswaDetail->delete();
+        // $kelasSiswa->delete();
         $guru->delete();
 
         return back()->with('delete','data berhasil di hapus');

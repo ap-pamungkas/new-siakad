@@ -10,7 +10,7 @@
 
     <ul class="metismenu" id="side-menu" >
 
-        <li class="menu-title">{{ auth('siswa')->user()->nama }}</li>
+        <li class="menu-title">{{ auth('siswa')->user()->nama }} </li>
 
 
         <x-layout.sidebar.menu-item url="{{url('siswa')}}" icon="fa fa-user" label="Profile" />

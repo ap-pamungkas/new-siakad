@@ -15,7 +15,7 @@ class SiswaController extends Controller
 
     function show($id){
         $data['siswa'] = siswa::findOrFail($id);
-        return view('admin.master-data.siswa.show', $data);
+        return view('kepsek.siswa.show', $data);
 
     }
 }
