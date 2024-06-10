@@ -11,7 +11,7 @@
             </div>
                
             </div>
-            <div class="card-body" >
+            <div class="card-body">
 
                 <p class="card-text"><strong>Nama:</strong> {{ $guru->nama }}</p>
                 <p class="card-text"><strong>NIP:</strong> {{ $guru->nip }}</p>
